@@ -18,7 +18,8 @@ if(NOT COMMAND find_host_package)
   endmacro()
 endif()
 
-find_host_package(PythonInterp 3 REQUIRED)
+find_host_package(Python3 REQUIRED)
+set(PYTHON_EXECUTABLE ${Python3_EXECUTABLE})
 
 option(DISABLE_RTTI "Disable RTTI in builds")
 if(DISABLE_RTTI)
